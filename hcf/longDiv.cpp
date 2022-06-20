@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int nextSp(int q, int rem) {
+int nextSp(long long int q, long long int rem) {
     int qDig = 0;
     while(q){
         qDig++;
@@ -26,7 +26,7 @@ void disp(vector<int>& v) {
 }
 
 void cal(long long int n, vector<int>& v) {
-    while(n) {
+    while(n > 0) {
         v.push_back(0);
         n /= 10;
     }
@@ -39,13 +39,13 @@ void printLine(int n) {
     }
 }
 
-int factor(int& a, int& b) {
+int factor(long long int& a, long long int& b) {
     
-    int divisor = a > b ? b : a;
-    int dividend = a > b ? a : b;
+    long long int divisor = a > b ? b : a;
+    long long int dividend = a > b ? a : b;
 
-    int rem = dividend;
-    int hcf = 0;
+    long long int rem = dividend;
+    long long int hcf = 0;
 
     vector<int> space;
     cal(divisor, space);
@@ -60,14 +60,18 @@ int factor(int& a, int& b) {
         cout << divisor << " ) " << dividend << " ( " << q << endl;
         
         cal(divisor * 10, space);
+        int nxt = nextSp(dividend, divisor * q);
+        cal(nxt, space);
         disp(space);
         cout << "- " << divisor * q << endl;
+        if(nxt != 0)
+            space.pop_back();
         
         disp(space);
         cout << " ";
         printLine(dividend * 100);
 
-        int nxt = nextSp(dividend, rem);
+        nxt = nextSp(dividend, rem);
         cal(10, space);
         cal(nxt, space);
 
@@ -83,7 +87,7 @@ int factor(int& a, int& b) {
 
 int main() {
     
-    int n1, n2;
+    long long int n1, n2;
     
     cout << "\nFind HCF\n";
     cout << "Input number 1 : ";
@@ -93,7 +97,7 @@ int main() {
     cin >> n2;
 
     cout << "\nLong division :-\n";
-    int ans = factor(n1, n2);
+    long long int ans = factor(n1, n2);
 
     cout << "\n\nHCF of " << n1 << ", " << n2 << " : " << ans << endl;
     return 0;
