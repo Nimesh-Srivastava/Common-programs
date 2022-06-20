@@ -1,5 +1,5 @@
 # LCS
-This program uses dp to find the lcs, i.e., Largest Common Subsequence, of 2 strings.
+This program uses DP(dynamic programming) to find the lcs, i.e., Largest Common Subsequence, of 2 strings.
 <br>
 <br>
 
