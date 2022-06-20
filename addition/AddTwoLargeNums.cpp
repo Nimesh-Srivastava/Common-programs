@@ -67,6 +67,7 @@ void display(vector<int>& v, string& s1, string& s2) {
 
     int diff = v.size() - s1.size() + 3;
 
+    cout << "\nAddition :- \n" << endl;
     for(int i = 0; i < diff; i++)
         cout << " ";
     cout << s1 << endl;
@@ -84,12 +85,15 @@ void display(vector<int>& v, string& s1, string& s2) {
     cout << "   ";
     for(int i = 0; i < v.size(); i++)
         cout << v[i];
+
+    cout << "\n" << endl;
 }
 
 int main() {
     
     string s1, s2;
 
+    cout << endl;
     getInput(s1, 1);
     getInput(s2, 2);
 
