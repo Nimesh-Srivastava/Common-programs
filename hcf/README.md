@@ -5,4 +5,4 @@ The above program finds HCF (highest common factor) through long division method
 
 ### Example
 Smaple run of the program<br>
-![Screenshot (747)](https://user-images.githubusercontent.com/30381993/174539305-8f71566a-a8da-41fe-afd7-18388abc5f54.png)
+![Screenshot (751)](https://user-images.githubusercontent.com/30381993/174602529-c8fdcfda-aa7c-43e3-b777-ed4bc0cc66d4.png)
