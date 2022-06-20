@@ -4,3 +4,5 @@ It uses a string, i.e., a dynamic vector to store each digit of a number, and th
 
 ## Output
 Sample output of program :<br>
+<br>
+![Screenshot (752)](https://user-images.githubusercontent.com/30381993/174605253-12cde4c1-d21e-4668-9532-164f2ac03d8e.png)
